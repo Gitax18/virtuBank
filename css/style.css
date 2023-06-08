@@ -161,6 +161,8 @@ body{
 .login-form{
     width: 35%;
     padding: 2.4rem;
+    background-color: #ffffff75;
+    box-shadow: 2px 2px 15px 2px #00000025;
 }
 
 .login-form a{
