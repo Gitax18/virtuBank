@@ -9,52 +9,53 @@
     <!-- css's -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- google font's -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">VirtuBank</div>
-            <h1 class="greet--heading" id="greet--heading">Login to continue</h1>
+    <header class="container">
+        <div class="header">
+            <div class="logo b">VirtuBank</div>
+            <h1 class="ib" id="greet--heading">Login to continue</h1>
         </div>
     </header>
 
     <main>
         <div class="container">
             <!-- login form (default) -->
-            <section class="form-login">
-                <form class="grid grid-col-2">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" id="username">
+            <section class="login-form-container">
+                <form class="login-form grid grid-col-1 gap-sm">
+                    <h2 class="greet-heading-login">Welcome</h2> 
+                    <hr class="login-divider">
+                    <input type="email" name="email" id="email-login" placeholder="Email" required>
+                    <input type="password" name="password" id="password-login" placeholder="Password" required>
 
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" id="password">
-
-                    <button type="submit" id="btn-login">Login</button> <br>
-                    <a href="#">Create a account?</a>
+                    <button type="submit" id="btn-login" class="b">Login</button>
+                    <span><a href="#">Create a account?</a></span>
                 </form>
             </section>
-            <br><br>
             <!-- Register form (if not login) -->
-            <section class="form-register">
+            <!-- <section class="form-register hidden">
                 <form>
                     <div class="register-grid-container">
                         <input type="text" name="firstname" id="firstname" placeholder="First Name">
                         <input type="text" name="lastname" id="lastname" placeholder="Lasr Name">
                         <input type="email" name="email" id="email" placeholder="Email">
                         <input type="tel" name="mobile" id="mobile" placeholder="Mobile no.">
-                        <!-- <input type="text" name="address" id="address" placeholder="Address"> -->
                         <textarea name="address" id="address" cols="30" rows="10" placeholder="Address"></textarea>
                         <input type="text" name="city" id="city" placeholder="City">
                         <input type="text" name="state" id="state" placeholder="State">
                         <input type="number" name="pincode" id="pincode" placeholder="Pincode">
-
                         <button type="submit" id="btn-register">Register</button> <br>
-
                     </div>
                 </form>
-            </section>
+            </section> -->
         </div>
     </main>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

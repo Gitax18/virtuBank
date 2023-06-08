@@ -7,6 +7,8 @@
 
 html{
     font-size: 63.5%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 400  ;
 }
 
 /* 
@@ -14,14 +16,20 @@ samll font : 1.6rem
 medium font : 2.4rem
 large font : 3.2rem
 
-letter spacing: text - 1.8
-                heading - 1.2
+letter spacing: text - .18rem
+                heading - .12rem
+
+Colors: main: #E55969
+        accent: #FDD57F
+        graye: #4C91D8
+
+        tints: #fee6b2, 
 
 */
 
+/* containers */
 .container{
     max-width: 80vw;
-    background-color: antiquewhite;
     margin: auto;
 }
 
@@ -30,6 +38,7 @@ letter spacing: text - 1.8
     visibility: hidden;
     pointer-events: none;
 }
+/* grids */
 
 .grid{
     display: grid;
@@ -57,3 +66,135 @@ letter spacing: text - 1.8
     gap: 1.6rem;
 }
 
+/* fonts */
+.i{
+    font-style: italic;
+}
+
+.b{
+    font-weight: bold;
+}
+
+.ib{
+    font-style: italic;
+    font-weight: 700;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$ UTILITIES CLASSES ENDS */
+
+body{
+    background-color: #fee6b2;
+
+}
+
+/* creating Header element */
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#greet--heading{
+    color: #404040;
+}
+/* ************************* LOGO styles start****************************** */
+.logo{
+    font-size: 2.4rem;
+    letter-spacing: .12rem;
+    color: #FFF;
+    position: relative;
+}
+
+.logo::before,
+.logo::after{
+    content: '';
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    transform: skew(20deg);
+}
+
+.logo::before{
+    background-color: #E55969;
+    z-index: -1;
+    top: -.3rem;
+    left: -1rem;
+    
+}
+
+.logo::after{
+    background-color: #4C91D8;
+    z-index: -2;
+    top: -1rem;
+    left: -2rem;
+}
+/* ************************* LOGO Styles end****************************** */
+
+
+
+/* login form content */
+
+.greet-heading-login{
+    font-size: 3.6rem;
+    position: relative;
+    text-align: center;
+    color: #404040;
+}
+
+.login-divider{
+    border-bottom: noen;
+    border-top: .5rem dotted #00000075;
+    width: 55%;
+    margin: .4rem auto;
+    /* margin: auto; */
+    /* border-style: dotted; */
+}
+
+.login-form-container{
+    width: 100%;
+    height: calc(100vh - 7rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form{
+    width: 35%;
+    padding: 2.4rem;
+}
+
+.login-form a{
+    color: #404040;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.login-form input{
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    text-align: center;
+    border: none;
+    font-weight: 500;
+    font-family: inherit;
+    height: 4rem;
+    background-color: #ffffff75;
+}
+
+.login-form input:active,
+.login-form input:focus{
+    outline: none;
+}
+
+#btn-login{
+    background-color: #fff;
+    border: none;
+    color: #caaa66;
+    height: 4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 100ms ease-out;
+}
+
+#btn-login:active{
+    scale: 0.99;
+}
