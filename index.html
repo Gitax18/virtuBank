@@ -4,9 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bank management</title>
+    <title>virtuBank login: Most trusted online banking platform</title>
+
+    <!-- css's -->
+    <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 <body>
-    
+    <header>
+        <div class="container">
+            <div class="logo">VirtuBank</div>
+            <h1 class="greet--heading" id="greet--heading">Welcome to most trusted banking platform </h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- login form (default) -->
+            <section class="form-login">
+                <form>
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username"> <br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password"><br>
+
+                    <button type="submit" id="btn-login">Login</button> <br>
+                    <a href="#">Create a account?</a>
+                </form>
+            </section>
+            <br><br>
+            <!-- Register form (if not login) -->
+            <section class="form-register">
+                <form>
+                    <div class="register-grid-container">
+                        <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                        <input type="text" name="lastname" id="lastname" placeholder="Lasr Name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="tel" name="mobile" id="mobile" placeholder="Mobile no.">
+                        <!-- <input type="text" name="address" id="address" placeholder="Address"> -->
+                        <textarea name="address" id="address" cols="30" rows="10" placeholder="Address"></textarea>
+                        <input type="text" name="city" id="city" placeholder="City">
+                        <input type="text" name="state" id="state" placeholder="State">
+                        <input type="number" name="pincode" id="pincode" placeholder="Pincode">
+
+                        <button type="submit" id="btn-register">Register</button> <br>
+
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
