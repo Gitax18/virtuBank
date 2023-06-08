@@ -1,0 +1,59 @@
+/* UTILITY CLASSES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 63.5%;
+}
+
+/* 
+samll font : 1.6rem
+medium font : 2.4rem
+large font : 3.2rem
+
+letter spacing: text - 1.8
+                heading - 1.2
+
+*/
+
+.container{
+    max-width: 80vw;
+    background-color: antiquewhite;
+    margin: auto;
+}
+
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-col-1{
+    grid-template-columns: 1fr;
+}
+.grid-col-2{
+    grid-template-columns: 1fr 1fr;
+}
+.grid-col-3{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.gap-sm{
+    gap: .8rem;
+}
+
+.gap-md{
+    gap: 1.2rem;
+}
+
+.gap-lg{
+    gap: 1.6rem;
+}
+
