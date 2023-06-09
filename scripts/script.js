@@ -13,7 +13,10 @@ const loginForm = `
                 <input type="password" name="password" id="password-login" placeholder="Password" required>
 
                 <button type="submit" id="btn-login" class="b">Login</button>
-                <span><a href="#">Create a account?</a></span>
+                <div class='login-links'>
+                    <span><a href="#" id="register-link">Create a account?</a></span>
+                    <span><a href="#" id="forgot-password-link">Forgot password?</a></span>
+                </div>
             </form>
             </section>
 `
@@ -47,10 +50,11 @@ const user = {}
 
 
 // ************************* FUNCTIONS
-function registerUser(e){
+function registerUser(  ){
     // e.preventDefault()
     localStorage.clear()
 
+  
 
     const firstname = document.getElementById('firstname') 
     const lastname = document.getElementById('lastname') 
@@ -61,6 +65,7 @@ function registerUser(e){
     const state = document.getElementById('state') 
     const password = document.getElementById('password') 
     const wantcard = document.getElementById('card-true')
+
 
     let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 // checking that all the form input are full if they are not then data does not store
@@ -86,6 +91,8 @@ function registerUser(e){
             else localStorage.setItem('credit', false)
 
             alert(`Dear ${firstname.value}, Your account has been registered, login to continue`)
+            location.reload()
+
         } else alert('fill the form completely')
 }
 
@@ -95,21 +102,35 @@ function loginUser(e){
     e.preventDefault()
     const loginEmail = document.getElementById('email-login')
     const loginPassword = document.getElementById('password-login')
-
+    
     if (loginEmail.value === localStorage.getItem('email')
     && loginPassword.value === localStorage.getItem('password')){
         loginEmail.value = loginPassword.value = ''
         alert('login success')
 
     } else alert('Wrong credentials')
+
+    
 }
 
 // localStorage.clear()
 if (localStorage.getItem('email') === null){
     container.innerHTML = registerForm
+    const greet = document.getElementById('greet--heading')
+    greet.textContent = "Register to continue"
     document.getElementById('btn-register').addEventListener('click', registerUser)
 } else{
     container.innerHTML = loginForm
+    const crtActBtn = document.getElementById('register-link')
+
+    function register() {
+        localStorage.clear()
+        location.reload()
+    }
+
+    crtActBtn.addEventListener('click', register)
+    const greet = document.getElementById('greet--heading')
+    greet.textContent = "Login to continue"
     document.getElementById('btn-login').addEventListener('click', loginUser)
     
 }

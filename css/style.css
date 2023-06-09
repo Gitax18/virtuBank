@@ -97,6 +97,8 @@ Colors: main: #E55969
     font-size: 2.4rem;
     letter-spacing: .12rem;
     color: #FFF;
+    height: 3rem;
+    width: 12rem;
     position: relative;
 }
 
@@ -147,7 +149,7 @@ Colors: main: #E55969
 
 .login-form-container,
 .register-form-container{
-    width: 100%;
+    max-width: 100%;
     height: calc(100vh - 7rem);
     display: flex;
     align-items: center;
@@ -155,9 +157,9 @@ Colors: main: #E55969
 }
 
 .login-form{
-    width: 35%;
+    width: 35rem;
     background-color: #E5596990;
-    padding: 2.4rem;
+    padding: 1.8rem;
     box-shadow: 2px 2px 15px 2px #00000010;
 }
 
@@ -200,6 +202,12 @@ Colors: main: #E55969
 #btn-login:active,
 #btn-register:active{
     scale: 0.99;
+}
+
+.login-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
