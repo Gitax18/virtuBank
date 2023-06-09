@@ -109,7 +109,7 @@ function loginUser(e){
     && loginPassword.value === localStorage.getItem('password')){
         loginEmail.value = loginPassword.value = ''
         alert('login success')
-
+        location.href = 'dashboard.html'
     } else alert('Wrong credentials')
 
     
