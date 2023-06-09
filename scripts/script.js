@@ -54,7 +54,7 @@ function registerUser(  ){
     // e.preventDefault()
     localStorage.clear()
 
-  
+    let formFilled = false
 
     const firstname = document.getElementById('firstname') 
     const lastname = document.getElementById('lastname') 
@@ -66,8 +66,6 @@ function registerUser(  ){
     const password = document.getElementById('password') 
     const wantcard = document.getElementById('card-true')
 
-
-    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 // checking that all the form input are full if they are not then data does not store
     if (firstname.value !== '' &&
         lastname.value !== '' &&
@@ -90,10 +88,14 @@ function registerUser(  ){
             if (wantcard.checked) localStorage.setItem('credit', true)
             else localStorage.setItem('credit', false)
 
+            formFilled = true
+
             alert(`Dear ${firstname.value}, Your account has been registered, login to continue`)
-            location.reload()
+            container.innerHTML = loginForm
 
         } else alert('fill the form completely')
+        
+        // if (formFilled) window.location.reload()
 }
 
 
