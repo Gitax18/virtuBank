@@ -1,0 +1,49 @@
+/* $$$$$$$$$$$$$$$$$$$$$$$  time profile header */
+.time-profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem;
+}
+
+.labeltime{
+    font-size: 1.2rem;
+    letter-spacing: .145rem;
+    font-weight: 500;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$ movement row container */
+.movement-container{
+   background-color: #3a3a3a;
+   max-width: 60rem;
+}
+
+.movement-row{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.4rem;
+}
+
+.movement-withdraw{
+    background-color: greenyellow;
+    padding: .8rem 1.6rem;
+    border-radius: 50px;
+    color: #3a3a3a;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: .12rem;
+}
+
+.movement-time{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: #3a3a3a;
+    margin: 0 1.2rem;
+}
+
+.movement-amount{
+    font-size: 2.4rem;
+}
