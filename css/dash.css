@@ -3,6 +3,7 @@
     max-width: 100rem;
     margin: auto;
     border-radius: .8rem;
+    overflow: hidden;
     height: 75vh;
 }
 
