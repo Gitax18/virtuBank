@@ -3,12 +3,13 @@
     max-width: 100rem;
     margin: auto;
     border-radius: .8rem;
-    overflow: hidden;
     height: 75vh;
 }
 
 body{
     background-color: #eaeaea;
+    overflow: hidden;
+
 }
 
 
@@ -28,17 +29,33 @@ body{
 
 /* $$$$$$$$$$$$$$$$$$$$$$$ movement row container */
 .movement-container{
-   background-color: #1b1c1e;
+   background-color: #eaeaea;
    max-width: 50rem;
    display: flex;
+   height: 100%;
    flex-direction: column;
-   gap: .05rem;
+   gap: .2rem;
+   overflow-y: scroll;
+}
+
+/* hiding scrollbar but being able to scroll (internet explorer and firefox) */
+.movement-container {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+/* hiding scrollbar but being able to scroll (safari and chrome) */
+.movement-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .movement-row{
     background-color: #fff;
     display: flex;
     align-items: center;
+    border: none ;
+    margin: 0  ;
+    height: 7rem ;
+    width: 100%;
     justify-content: space-between;
     padding: 2.4rem;
 }
