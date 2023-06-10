@@ -1,3 +1,17 @@
+.app-container{
+    background-color: aliceblue;
+    max-width: 100rem;
+    margin: auto;
+    border-radius: .8rem;
+    overflow: hidden;
+    height: 75vh;
+}
+
+body{
+    background-color: #eaeaea;
+}
+
+
 /* $$$$$$$$$$$$$$$$$$$$$$$  time profile header */
 .time-profile{
     display: flex;
@@ -14,36 +28,49 @@
 
 /* $$$$$$$$$$$$$$$$$$$$$$$ movement row container */
 .movement-container{
-   background-color: #3a3a3a;
-   max-width: 60rem;
+   background-color: #1b1c1e;
+   max-width: 50rem;
+   display: flex;
+   flex-direction: column;
+   gap: .05rem;
 }
 
 .movement-row{
-    background-color: antiquewhite;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2.4rem;
 }
 
+.movement-withdraw,
+.movement-deposit{
+    padding: .4rem .8rem;
+    border-radius: 50px;
+    color: #1b1c1e;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: .12rem;
+}
 .movement-withdraw{
     background-color: greenyellow;
-    padding: .8rem 1.6rem;
-    border-radius: 50px;
-    color: #3a3a3a;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: .12rem;
+}
+
+.movement-deposit{
+    background-color: red;
 }
 
 .movement-time{
     font-size: 1.2rem;
     text-transform: capitalize;
     font-weight: 500;
-    color: #3a3a3a;
-    margin: 0 1.2rem;
+    color: #1b1c1e;
+    letter-spacing: .12rem;
+    margin: 0 2.4rem;
 }
 
 .movement-amount{
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    color: #1b1c1e;
+    font-weight: 500;
 }
