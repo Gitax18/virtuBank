@@ -134,5 +134,6 @@ if (localStorage.getItem('email') === null){
     const greet = document.getElementById('greet--heading')
     greet.textContent = "Login to continue"
     document.getElementById('btn-login').addEventListener('click', loginUser)
+    document.getElementById('btn-login').addEventListener('keydown', loginUser)
     
 }
