@@ -104,6 +104,7 @@ Colors: main: #E55969
     height: 3rem;
     width: 12rem;
     position: relative;
+    
 }
 
 .logo::before,
@@ -111,6 +112,7 @@ Colors: main: #E55969
     content: '';
     position: absolute;
     height: 120%;
+    border-radius: 1rem;
     width: 120%;
     transform: skew(20deg);
 }

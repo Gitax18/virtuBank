@@ -168,3 +168,29 @@ body{
     z-index: 3;
     color: #fff;
 }
+
+/* $$$$$$$$$$$$$$$$$$$$$ styling total balance and summaries */
+
+.container-balance{
+    /* background-color: #5caeff; */
+    margin: 3.6rem auto;
+    padding: .8rem 2.8rem;
+    font-size: 3.2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #1b1c1e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-sumin,
+.container-sumout{
+    margin: .4rem auto;
+    padding: .8rem 2.8rem;
+    text-transform: capitalize;
+    color: #1b1c1e;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
