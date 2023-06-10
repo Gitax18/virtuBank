@@ -35,27 +35,22 @@
             <h1 class="ib" id="greet--heading">your activties</h1>
         </div>
 <!-- --------------------------------------------------------------------------- -->
-        <section class="app-container grid grid-col-2 gap-md">
+        <section class="app-container grid grid-col-2 gap-sm">
             <!-- container to store all the movements -->
             <div class="movement-container">
-                <div class="movement-row">
-                    <div class="labelleft"> <!-- container to store amount type and its date. -->
+                <!-- <div class="movement-row">
+                    <div class="labelleft"> 
                         <span class="movement-withdraw">DEPOSIT</span>
                         <span class="movement-time">today</span>
                     </div>
-                    <div class="labelright"> <!-- container to store amount. -->
+                    <div class="labelright"> 
                         <span class="movement-amount">₹ 5000/-</span>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="movement-row">
-                    <div class="labelleft"> <!-- container to store amount type and its date. -->
-                        <span class="movement-deposit">DEPOSIT</span>
-                        <span class="movement-time">today</span>
-                    </div>
-                    <div class="labelright"> <!-- container to store amount. -->
-                        <span class="movement-amount">₹ 5000/-</span>
-                    </div>
+                <div class="no-movements">
+                    <p class="no-mov-logo">ㄟ( ▔, ▔ )ㄏ</p>
+                    <p class="no-mov-message">no payments till now </p>
                 </div>
                 
             </div>
@@ -66,8 +61,27 @@
                     <span class="profile-logo"><a href="#"> <img src="user.png" alt="user" width="32px"></a></span>
                 </div>
 
-                <!-- container for buttons -->
-                <div class="container-sidebtns grid grid-col-3 gap-lg m-auto">
+               
+                <!-- container for balance and summaries -->
+                <div class="container-moneyflow">
+                    <div class="container-balance">
+                        <span class="labelbalance">Balance:</span>
+                        <span class="balance">₹ 10000/-</span>
+                    </div>
+                    <div class="container-summaries grid grid-col-2">
+                        <div class="container-sumin">
+                            <span class="amount-sumin">Sum-in:</span>
+                            <span class="sumin">₹ 11000/-</span>
+                        </div>
+                        <div class="container-sumout">
+                            <span class="amount-sumout">Sum-out:</span>
+                            <span class="sumout">₹ 1000/-</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- container for buttons -->
+                 <div class="container-sidebtns grid grid-col-3 gap-lg m-auto">
                     <div class="loan-btn logo-container">
                         <div class="loan-logo relocate-btn">🪙</div>
                         <div class="logo-label">get loan</div>
@@ -79,21 +93,6 @@
                     <div class="remove-btn logo-container">
                         <div class="remove-logo relocate-btn">❌</div>
                         <div class="logo-label">remove</div>
-                    </div>
-                </div>
-                <!-- container for balance and summaries -->
-                <div class="container-moneyflow">
-                    <div class="container-balance">
-                        <span class="labelbalance">Balance:</span>
-                        <span class="balance">₹ 10000/-</span>
-                    </div>
-                    <div class="container-sumin">
-                        <span class="amount-sumin">Sum-in:</span>
-                        <span class="sumin">₹ 11000/-</span>
-                    </div>
-                    <div class="container-sumout">
-                        <span class="amount-sumout">Sum-out:</span>
-                        <span class="sumout">₹ 1000/-</span>
                     </div>
                 </div>
             </div>

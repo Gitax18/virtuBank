@@ -1,12 +1,12 @@
 body{
-    background-color: #eaeaea;
+    background-color: #e8e8e8;
     /* overflow: hidden; */
 
 }
 
 /* $$$$$$$$$$$$$$$$$$$$$$ App container  */
 .app-container{
-    background-color: aliceblue;
+    background-color: #ffffff;
     max-width: 100rem;
     margin: 3.6rem auto;
     border-radius: 1rem;
@@ -40,9 +40,10 @@ body{
 
 /* $$$$$$$$$$$$$$$$$$$$$$$ movement row container */
 .movement-container{
-   /* background-color: #eaeaea; */
+   background-color: #f4f4f4;
    max-width: 50rem;
    display: flex;
+   padding-right: .4rem;
    height: 100%;
    flex-direction: column;
    gap: .2rem;
@@ -57,6 +58,18 @@ body{
 /* hiding scrollbar but being able to scroll (safari and chrome) */
 .movement-container::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+}
+
+.no-movements{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    flex-direction: column;
+    gap: 1.4rem;
 }
 
 .movement-row{
@@ -186,11 +199,20 @@ body{
 
 .container-sumin,
 .container-sumout{
-    margin: .4rem auto;
+    margin: .4rem .8rem;
     padding: .8rem 2.8rem;
     text-transform: capitalize;
-    color: #1b1c1e;
-    display: flex;
-    align-items: center;
-    gap: 4rem;
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: 4rem; */
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.container-sumin{
+    color: rgb(121, 201, 0);
+}
+
+.container-sumout{
+    color: #ff7a8a;
 }
