@@ -38,6 +38,10 @@ Colors: main: #E55969
     visibility: hidden;
     pointer-events: none;
 }
+
+.m-auto{
+    margin: auto;
+}
 /* grids */
 
 .grid{

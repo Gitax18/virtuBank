@@ -25,19 +25,17 @@
     <header class="container">
         <div class="header">
             <div class="logo b">VirtuBank</div>
-            <h1 class="ib" id="greet--heading">Welcome </h1>
         </div>
     </header>
-
+    
     <hr style="margin: auto; width: 80vw; border-top: 2px solid black;">
-
+    
     <main class="container">
-        <div class="time-profile">
-            <span class="labeltime">Monday, 12:34</span>
-            <span class="profile-logo"><a href="#"> <img src="user.png" alt="user" width="32px"></a></span>
+        <div class="dashboard-title">
+            <h1 class="ib" id="greet--heading">your activties</h1>
         </div>
 <!-- --------------------------------------------------------------------------- -->
-        <section class="app-container">
+        <section class="app-container grid grid-col-2 gap-md">
             <!-- container to store all the movements -->
             <div class="movement-container">
                 <div class="movement-row">
@@ -62,7 +60,28 @@
                 
             </div>
 
-            <div class="account-info"></div>
+            <div class="account-info">
+                <div class="time-profile">
+                    <span class="labeltime">Monday, 12:34</span>
+                    <span class="profile-logo"><a href="#"> <img src="user.png" alt="user" width="32px"></a></span>
+                </div>
+
+                <!-- container for buttons -->
+                <div class="container-sidebtns grid grid-col-3 gap-lg m-auto">
+                    <div class="loan-btn logo-container">
+                        <div class="loan-logo relocate-btn">🪙</div>
+                        <div class="logo-label">get loan</div>
+                    </div>
+                    <div class="transfer-btn logo-container">
+                        <div class="transfer-logo relocate-btn">💸</div>
+                        <div class="logo-label">transfer</div>
+                    </div>
+                    <div class="remove-btn logo-container">
+                        <div class="remove-logo relocate-btn">❌</div>
+                        <div class="logo-label">remove</div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
