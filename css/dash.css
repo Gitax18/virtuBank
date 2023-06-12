@@ -120,6 +120,20 @@ body{
 
 /* $$$$$$$$$$$$$$$$$$ loan, transfer button container */
 
+.profile-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.greet-name{
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #1b1c1e;
+    
+}
+
 .container-sidebtns{
     height: 12rem;
     justify-items: center;

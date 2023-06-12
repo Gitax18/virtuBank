@@ -5,6 +5,7 @@ const labelTime = document.getElementById('label-time');
 const labelBalance = document.getElementById('balance');
 const labelSumIn = document.getElementById('sumin')
 const labelSumOut = document.getElementById('sumout')
+const usernameLabel = document.getElementById('username');
 
 // relocation buttons
 const getLoan = document.getElementById('getloan');
@@ -46,8 +47,20 @@ localStorage.setItem('movementTime', [
 const hasMovs = localStorage.getItem('movements');
 
 // calling all functions
+greetUserLabel()
 addMovements()
 addTotalBalance()
+
+// function to greet the user
+function greetUserLabel(){
+    if (hasMovs !== null){
+        const time = new Date();
+        const period = time.getHours() < 12 ? 'Good Morning': (time.getHours() > 12 && time.getHours() < 18 ? 'Good Afternoon' : 'Good Evening'); 
+
+        const user = localStorage.getItem('firstname')
+        usernameLabel.innerText = `${period}, ${user}`
+    }
+} 
 
 // function to add movement to the movement container
 function addMovements(){
@@ -84,7 +97,7 @@ function addMovements(){
                     <span class="movement-time">${date}</span>
                 </div>
                 <div class="labelright"> 
-                    <span class="movement-amount">₹ ${mov}/-</span>
+                    <span class="movement-amount">₹ ${Math.abs(mov)}/-</span>
                 </div>
             </div>
             `
@@ -106,3 +119,6 @@ function addTotalBalance(){
         labelBalance.innerHTML = `₹ ${balance} /-`
     }
 }
+
+// function to add to cash goes out of account (withdraw)
+
