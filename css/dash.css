@@ -107,11 +107,11 @@ body{
     color: #fff;
 }
 .movement-withdraw{
-    background-color: red;
+    background-color: #ff0000;
 }
 
 .movement-deposit{
-    background-color: rgb(117, 195, 0);
+    background-color: #75c300;
 }
 
 .movement-time{

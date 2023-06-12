@@ -50,6 +50,8 @@ const hasMovs = localStorage.getItem('movements');
 greetUserLabel()
 addMovements()
 addTotalBalance()
+calculateSumOut()
+calculateSumIn()
 
 // function to greet the user
 function greetUserLabel(){
@@ -116,9 +118,37 @@ function addTotalBalance(){
                         .map(e => Number(e))
         
         const balance = movements.reduce((acc, mov) => acc + mov, 0)
-        labelBalance.innerHTML = `₹ ${balance} /-`
+        labelBalance.innerHTML = `₹ ${Intl.NumberFormat('en-IN').format(balance)} /-`
+        
     }
 }
 
-// function to add to cash goes out of account (withdraw)
+// function to add to cash goes out of account (sum-out)
+function calculateSumOut(){
+    if (hasMovs !== null){
+        const sumout = localStorage.getItem('movements')
+                        .split(',')
+                        .map(e => Number(e))
+                        .filter(e => e < 0)
+                        .map(e => Math.abs(e))
+                        .reduce((a,e) => a+e,0)
 
+        labelSumOut.innerText = `- ₹ ${sumout}/-`
+        
+    }
+
+
+}
+// function to add to cash goes out of account (sum-out)
+function calculateSumIn(){
+    if (hasMovs !== null){
+        const sumin = localStorage.getItem('movements')
+                        .split(',')
+                        .map(e => Number(e))
+                        .map(e => Math.abs(e))
+                        .reduce((a,e) => a+e,0)
+
+        labelSumIn.innerText = `₹ ${sumin}/-`
+        
+    }
+}
