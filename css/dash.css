@@ -85,12 +85,23 @@ body{
     padding: 2.4rem;
 }
 
+.labelleft{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+}
+
 .movement-withdraw,
 .movement-deposit{
     padding: .4rem .8rem;
     border-radius: 50px;
     color: #1b1c1e;
     font-weight: 800;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1rem;
     letter-spacing: .12rem;
     color: #fff;
