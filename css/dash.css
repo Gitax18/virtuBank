@@ -7,7 +7,8 @@ body{
 /* $$$$$$$$$$$$$$$$$$$$$$ App container  */
 .app-container{
     background-color: #ffffff;
-    max-width: 100rem;
+    max-width: 1000px;
+    /* min-width: 100vw; */
     margin: 3.6rem auto;
     border-radius: 1rem;
     overflow-x: hidden;
@@ -41,9 +42,9 @@ body{
 /* $$$$$$$$$$$$$$$$$$$$$$$ movement row container */
 .movement-container{
    background-color: #f4f4f4;
-   max-width: 50rem;
+   /* width: 50rem; */
    display: flex;
-   padding-right: .4rem;
+   padding-left: .4rem;
    height: 100%;
    flex-direction: column;
    gap: .2rem;
@@ -142,7 +143,7 @@ body{
     padding: .5rem;
     display: flex;
     border: 2px solid #fff;
-    text-shadow: -3px -3px 5px #ffffff75;
+    text-shadow: -3px -3px 8px #ffffff50;
     align-items: center;
     justify-content: center;
     border-radius: 50%;   
@@ -184,6 +185,9 @@ body{
 
 /* $$$$$$$$$$$$$$$$$$$$$ styling total balance and summaries */
 
+
+
+
 .container-balance{
     /* background-color: #5caeff; */
     margin: 3.6rem auto;
@@ -215,4 +219,9 @@ body{
 
 .container-sumout{
     color: #ff7a8a;
+}
+
+.container-summaries{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

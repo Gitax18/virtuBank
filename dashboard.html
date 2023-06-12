@@ -36,28 +36,9 @@
         </div>
 <!-- --------------------------------------------------------------------------- -->
         <section class="app-container grid grid-col-2 gap-sm">
-            <!-- container to store all the movements -->
-            <div class="movement-container">
-                <!-- <div class="movement-row">
-                    <div class="labelleft"> 
-                        <span class="movement-withdraw">DEPOSIT</span>
-                        <span class="movement-time">today</span>
-                    </div>
-                    <div class="labelright"> 
-                        <span class="movement-amount">₹ 5000/-</span>
-                    </div>
-                </div> -->
-
-                <div class="no-movements">
-                    <p class="no-mov-logo">ㄟ( ▔, ▔ )ㄏ</p>
-                    <p class="no-mov-message">no payments till now </p>
-                </div>
-                
-            </div>
-
             <div class="account-info">
                 <div class="time-profile">
-                    <span class="labeltime">Monday, 12 june 2023, 12:34</span>
+                    <span class="labeltime" id="label-time">Monday, 12 june 2023, 12:34</span>
                     <span class="profile-logo"><a href="#"> <img src="user.png" alt="user" width="32px"></a></span>
                 </div>
 
@@ -66,36 +47,61 @@
                 <div class="container-moneyflow">
                     <div class="container-balance">
                         <span class="labelbalance">Balance:</span>
-                        <span class="balance">₹ 0/-</span>
+                        <span class="balance" id="balance">₹ 0/-</span>
                     </div>
-                    <div class="container-summaries grid grid-col-2">
+                    <div class="container-summaries ">
                         <div class="container-sumin">
-                            <span class="amount-sumin">Sum-in:</span>
-                            <span class="sumin">₹ 0/-</span>
+                            <span class="amount-sumin" >Sum-in:</span>
+                            <span class="sumin" id="sumin">₹ 0/-</span>
                         </div>
                         <div class="container-sumout">
                             <span class="amount-sumout">Sum-out:</span>
-                            <span class="sumout">₹ 0/-</span>
+                            <span class="sumout" id="sumout">₹ 0/-</span>
                         </div>
                     </div>
                 </div>
 
                  <!-- container for buttons -->
                  <div class="container-sidebtns grid grid-col-3 gap-lg m-auto">
-                    <div class="loan-btn logo-container">
+                    <div class="loan-btn logo-container" id="getloan">
                         <div class="loan-logo relocate-btn">🪙</div>
-                        <div class="logo-label">get loan</div>
+                        <div class="logo-label" >get loan</div>
                     </div>
-                    <div class="transfer-btn logo-container">
+                    <div class="transfer-btn logo-container" id="transfer">
                         <div class="transfer-logo relocate-btn">💸</div>
                         <div class="logo-label">transfer</div>
                     </div>
-                    <div class="remove-btn logo-container">
+                    <div class="remove-btn logo-container" id="delete">
                         <div class="remove-logo relocate-btn">❌</div>
                         <div class="logo-label">remove</div>
                     </div>
                 </div>
             </div>
+
+
+            <!-- container to store all the movements -->
+            <div class="movement-container">
+
+                <!-- a row -->
+                <div class="movement-row hidden">
+                    <div class="labelleft"> 
+                        <span class="movement-withdraw">DEPOSIT</span>
+                        <span class="movement-time">today</span>
+                    </div>
+                    <div class="labelright"> 
+                        <span class="movement-amount">₹ 5000/-</span>
+                    </div>
+                </div>
+
+                <!-- no movement -->
+                <div class="no-movements ">
+                    <p class="no-mov-logo">ㄟ( ▔, ▔ )ㄏ</p>
+                    <p class="no-mov-message">no payments till now </p>
+                </div>
+                
+            </div>
+
+            
         </section>
     </main>
 

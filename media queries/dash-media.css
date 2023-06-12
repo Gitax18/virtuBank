@@ -1,0 +1,31 @@
+@media screen and (max-width:1055px) {
+    html{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .grid-col-2{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    .account-info{
+        height: 50%;
+    }
+    .movement-container{
+        height: 100%;
+    }
+    .container-sidebtns{
+        margin-bottom: 3rem;
+    }
+
+}
+
+@media screen and (max-width:455px) {
+    html{
+        font-size: 6px;
+    }
+    .app-container{
+        height: 90vh;
+    }
+}
