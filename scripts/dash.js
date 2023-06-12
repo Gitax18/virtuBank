@@ -1,5 +1,8 @@
 'use strict';
 
+// redirecting user if not registered
+if(localStorage.getItem('firstname') === null) location.href = 'index.html'
+
 // main label
 const labelTime = document.getElementById('label-time');
 const labelBalance = document.getElementById('balance');
@@ -32,9 +35,10 @@ labelTime.textContent = `${day}/${month}/${year}, ${hours}:${mins} ${period}`
 
 // setting movements in localstorage 
 // fake movements
-localStorage.setItem('movements', [100, 4000, -800, -120, 80]);
+localStorage.setItem('movements', [-100, 3000, 4000, -100, -500, 700]);
 localStorage.setItem('movementTime', [
     "2019-09-01T14:48:00.000Z",
+    "2020-06-12T10:48:00.000Z",
     "2022-10-02T12:12:00.000Z",
     "2022-11-05T18:43:00.000Z",
     "2023-01-06T22:08:00.000Z",
@@ -52,6 +56,7 @@ addMovements()
 addTotalBalance()
 calculateSumOut()
 calculateSumIn()
+
 
 // function to greet the user
 function greetUserLabel(){
@@ -117,8 +122,10 @@ function addTotalBalance(){
                         .split(',')
                         .map(e => Number(e))
         
-        const balance = movements.reduce((acc, mov) => acc + mov, 0)
-        labelBalance.innerHTML = `₹ ${Intl.NumberFormat('en-IN').format(balance)} /-`
+        const balance = Math.trunc(movements.reduce((acc, mov) => acc + mov, 0))
+
+        
+        labelBalance.innerHTML = `₹ ${Intl.NumberFormat('en-IN').format(balance > 0 ? balance : 0)} /-`
         
     }
 }
@@ -133,7 +140,7 @@ function calculateSumOut(){
                         .map(e => Math.abs(e))
                         .reduce((a,e) => a+e,0)
 
-        labelSumOut.innerText = `- ₹ ${sumout}/-`
+        labelSumOut.innerText = `- ₹ ${Math.trunc(sumout)}/-`
         
     }
 
@@ -148,7 +155,7 @@ function calculateSumIn(){
                         .map(e => Math.abs(e))
                         .reduce((a,e) => a+e,0)
 
-        labelSumIn.innerText = `₹ ${sumin}/-`
+        labelSumIn.innerText = `₹ ${Math.trunc(sumin)}/-`
         
     }
 }

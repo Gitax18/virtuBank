@@ -20,7 +20,7 @@ body{
     font-weight: 600;
     letter-spacing: 0.12rem;
     text-transform: uppercase;
-    margin: 4.8rem 0 3.6rem;
+    margin: 4.8rem 0;
     color: #1b1c1e;
 }
 
@@ -217,7 +217,7 @@ body{
 .container-balance{
     /* background-color: #5caeff; */
     margin: 3.6rem auto;
-    padding: .8rem 2.8rem;
+    padding: .8rem 2.8rem .8rem 1.2rem;
     font-size: 3.2rem;
     text-transform: capitalize;
     font-weight: 600;
@@ -230,7 +230,7 @@ body{
 .container-sumin,
 .container-sumout{
     margin: .4rem .8rem;
-    padding: .8rem 2.8rem;
+    padding: .8rem 2.8rem .8rem 1.2rem;
     text-transform: capitalize;
     /* display: flex; */
     /* align-items: center; */
