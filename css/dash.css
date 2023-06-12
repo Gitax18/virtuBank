@@ -93,13 +93,14 @@ body{
     font-weight: 800;
     font-size: 1rem;
     letter-spacing: .12rem;
+    color: #fff;
 }
 .movement-withdraw{
-    background-color: greenyellow;
+    background-color: red;
 }
 
 .movement-deposit{
-    background-color: red;
+    background-color: rgb(117, 195, 0);
 }
 
 .movement-time{
