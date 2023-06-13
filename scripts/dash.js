@@ -62,8 +62,9 @@ calculateSumIn()
 function greetUserLabel(){
     if (hasMovs !== null){
         const time = new Date();
-        const period = time.getHours() < 12 ? 'Good Morning': (time.getHours() > 12 && time.getHours() < 18 ? 'Good Afternoon' : 'Good Evening'); 
-
+        const period = time.getHours() < 12 ? 'Good Morning': (time.getHours() >= 12 && time.getHours() < 18 ? 'Good Afternoon' : 'Good Evening'); 
+        console.log(time.getHours())
+        console.log(period)
         const user = localStorage.getItem('firstname')
         usernameLabel.innerText = `${period}, ${user}`
     }
@@ -140,7 +141,7 @@ function calculateSumOut(){
                         .map(e => Math.abs(e))
                         .reduce((a,e) => a+e,0)
 
-        labelSumOut.innerText = `- ₹ ${Math.trunc(sumout)}/-`
+        labelSumOut.innerText = `₹ ${Math.trunc(sumout)}/-`
         
     }
 
