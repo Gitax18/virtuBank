@@ -14,6 +14,7 @@ const usernameLabel = document.getElementById('username');
 const getLoan = document.getElementById('getloan');
 const transfer = document.getElementById('transfer');
 const deleteAccount = document.getElementById('delete');
+const profile = document.getElementById('profile');
 
 // movements 
 const movementContainer = document.querySelector('.movement-container');  
@@ -57,7 +58,15 @@ addTotalBalance()
 calculateSumOut()
 calculateSumIn()
 
+// ******************* Event listeners
+getLoan.addEventListener('click', ()=> location.href = 'credit.html')
+transfer.addEventListener('click', ()=> location.href = 'transfer.html')
+deleteAccount.addEventListener('click', ()=> location.href = 'remove.html')
+profile.addEventListener('click', ()=> location.href = 'profile.html')
 
+
+
+// ******************* Functions
 // function to greet the user
 function greetUserLabel(){
     if (hasMovs !== null){

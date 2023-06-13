@@ -1,0 +1,43 @@
+.card-container{
+    background-color: antiquewhite;
+    height: 40vh;
+    position: relative;
+}
+
+.card-front,
+.card-back{
+    background-color: rgb(0, 73, 136);
+    height: 19rem;
+    width: 35rem;
+    border-radius: 1rem;
+    color: white;
+    position: absolute;
+}
+
+.card-back{
+    background-color: green;
+    right: 0;
+}
+
+.card-num-section{
+    position: absolute;
+    font-size: 2.8rem;
+    top: 50%;
+    transform: translate(15%, -50%);
+}
+
+.cardholder{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.exp-date{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1.6rem;
+}
+
