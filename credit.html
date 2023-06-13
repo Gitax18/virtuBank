@@ -8,8 +8,8 @@
         <link rel="shortcut icon" href="favico.png" type="image/x-icon">
     
         <!--  stylesheets -->
-        <link rel="stylesheet" href="css/credit.css">
         <link rel="stylesheet" href="css/utilities.css">
+        <link rel="stylesheet" href="css/credit.css">
     
         <!-- media queries -->
         <link rel="stylesheet" href="media queries/credit-media.css">
@@ -21,10 +21,20 @@
      
     </head>
 <body>
+        <header class="container">
+            <div class="header">
+                <div class="logo b">VirtuBank</div>
+            </div>
+        </header>
+        
+        
         <div class="container">
             <div class="card-container">
                 <section class="card-front">
+                    
+                    <span class="logo b logo-card">VirtuBank</span>
                     <img src="chip.png" alt="chip" class="chip">
+                    <img src="wifi.png" alt="wifi" class="wifi">
                     <div class="card-num-section">
                         <span class="num-1">0000</span>
                         <span class="num-2">0000</span>
@@ -41,6 +51,30 @@
                     <span class="cvc">898</span>
                 </section>
             </div>
+        </div>
+
+        <div class="container">
+            <h1 class="main-heading">Get Loan</h1>
+
+            <form class="transfer-form">
+
+                <label for="name">cardholder name :</label>
+                <input type="number" name="name" id="name" placeholder="e.g. Jane Doe">
+
+                <!-- 10 digits -->
+                <label for="account-no">Account No :</label>
+                <input type="number" name="account-no" id="account-no" placeholder="e.g. 0112345678">
+
+                <!-- 12 digits <bank name><code> -->
+                <label for="card-no">Credit Card No :</label>
+                <input type="text" name="card-no" id="card-no" placeholder="e.g. 0000000000000000">
+
+                <!-- 25% of current balance -->
+                <label for="amount">Loan Amount :</label>
+                <input type="text" name="amount" id="amount" placeholder="e.g. 10000">
+
+                <button type="submit">Get loan</button>
+            </form>
         </div>
 </body>
 </html>
