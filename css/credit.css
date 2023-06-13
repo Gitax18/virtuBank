@@ -2,42 +2,115 @@
     background-color: antiquewhite;
     height: 40vh;
     position: relative;
+    width: 50vw;
+    margin: auto;
+    padding: 3rem;
+    box-sizing: content-box;
+    font-size: 10px;
 }
 
 .card-front,
 .card-back{
-    background-color: rgb(0, 73, 136);
-    height: 19rem;
-    width: 35rem;
-    border-radius: 1rem;
+    height: 19em;
+    width: 35em;
+    border-radius: 1em;
     color: white;
     position: absolute;
 }
 
+.card-front{
+    background-color: #004988;
+    z-index: 3;
+    overflow: hidden;
+    left: 15%;
+}
+
+.card-front::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    z-index: 4;
+    background-image: url('../map.jpg');
+    background-size: cover;
+    opacity: 0.2;
+}
+
 .card-back{
-    background-color: green;
-    right: 0;
+    right: 20%;
+    top: 30%;
+    z-index: 1;
+    background-image: linear-gradient(to bottom right, #298adf, #00315c);
+}
+
+.card-back::after{
+    content: '';
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    height: 25%;
+    top: 60%;
+    left: 5%;
+    transform: translate(0, -50%);
+    background-color: white;
+}
+.card-back::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 20%;
+    transform: translate(0, -50%);
+    background-color: black;
+}
+
+.chip,
+.cardholder,
+.card-num-section,
+.exp-date{
+    z-index: 4;
+}
+
+.chip{
+    position: absolute;
+    height: 4em;
+    top: 20%;
+    left: 10%;
 }
 
 .card-num-section{
     position: absolute;
-    font-size: 2.8rem;
-    top: 50%;
-    transform: translate(15%, -50%);
+    font-size: 2.8em;
+    top: 60%;
+    left: 10%;
+    transform: translate(0, -50%);
 }
 
 .cardholder{
-    font-size: 1.6rem;
+    font-size: 1.6em;
     text-transform: uppercase;
     position: absolute;
-    left: 2rem;
-    bottom: 2rem;
+    left: 2em;
+    bottom: 2em;
 }
 
 .exp-date{
     position: absolute;
-    right: 2rem;
-    bottom: 2rem;
-    font-size: 1.6rem;
+    right: 2em;
+    bottom: 2em;
+    font-size: 1.6em;
+}
+
+.cvc{
+    position: absolute;
+    font-size: 1.6em;
+    right: 10%;
+    top: 60%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    color: black;
 }
 
