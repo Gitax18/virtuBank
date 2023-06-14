@@ -23,15 +23,24 @@
     }
 }
 
+@media screen and (max-width: 950px) {
+    .screen-1, .screen-2{
+        width: 50vw;
+    }
+}
+
 @media screen and (max-width:725px) {
     /* .card-container{ */
     /* } */
     .card-back{
         top: 70%;
     }
-
-    
+    .screen-1,
+    .screen-2{
+        width: 80vw;
+    }
 }
+
 
 @media screen and (max-width: 625px) {
     html{
@@ -68,5 +77,10 @@
     }
     .loan-form{
         width: 40rem;
+    }
+
+    .screen-1, 
+    .screen-2{
+        width: 100%;
     }
 }
