@@ -1,0 +1,72 @@
+@media screen and (max-width: 1320px) {
+    .card-back{
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .card-container{
+        width: 80vw;
+        height: 20vh;
+        font-size: 9px;
+        margin-bottom: 15rem;
+    }
+    .card-back{
+        top: 10%;
+        right: 25%;
+    }
+    .card-front{
+        left: 10%;
+    }
+    .grid-col-2{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:725px) {
+    /* .card-container{ */
+    /* } */
+    .card-back{
+        top: 70%;
+    }
+
+    
+}
+
+@media screen and (max-width: 625px) {
+    html{
+        font-size: 8px;
+    }
+    
+    .card-container{
+        font-size: 8px;
+    }
+
+    .container-form{
+        margin-top: 3.6rem;
+    }
+
+    .loan-form{
+        width: 70rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .card-container{
+        height: 10vh;
+        font-size: 7px;
+        width: 100vw;
+        margin-bottom: 15rem;
+    }
+
+    .card-back{
+        top: 100%;
+    }
+
+    .container-form{
+        width: 100vw;
+    }
+    .loan-form{
+        width: 40rem;
+    }
+}
