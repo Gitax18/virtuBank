@@ -195,7 +195,7 @@ main{
     left: 0;
     background-color: rgb(0, 50, 137);
     z-index: 5;
-    /* display: none; */
+    display: none;
 }
 
 .screen-1,
@@ -228,8 +228,4 @@ main{
 }
 .request-card:active{
     scale: 0.98;
-}
-
-.screen-1   {
-    display: none;
 }
