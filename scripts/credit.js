@@ -37,8 +37,8 @@ noScrBtn1.addEventListener('click', ()=>{
 })
 
 noScrBtn2.addEventListener('click', ()=>{
-    noCreditCardScreen.style.display = 'none'
     createCreditCard()
+    noCreditCardScreen.style.display = 'none'
 
 })
 
@@ -51,10 +51,10 @@ function createCreditCard(){
     const cardNum4  = Math.trunc((Math.random()*4999) + 1000)
 
     const creditCardNumber = `${String(cardNum1)} ${String(cardNum2)} ${String(cardNum3)} ${String(cardNum4)} `
-    const expYear = new Date().getFullYear().toString().substring(-2)
-    const expMonth = `${new Date().getMonth()}`.padStart(2,0)
+    const expYear = new Date().getFullYear().toString().substring(2)
+    const expMonth = `${new Date().getMonth() + 1}`.padStart(2,0)
 
-    const expDate = `${expMonth}/${expYear}`
+    const expDate = `${expMonth}/${Number(expYear) + 5}`
 
     const cvc = Math.trunc(Math.random()*888) + 100
 
@@ -77,8 +77,19 @@ function createCreditCard(){
 }
 
 function updateCreditCard() {
-    const creditCardNum = localStorage.getItem('creditCardNumber').split()
+    const creditCardNum = localStorage.getItem('creditCardNumber').split(' ')
     
+    numSection1.innerHTML = creditCardNum[0]
+    numSection2.innerHTML = creditCardNum[1]
+    numSection3.innerHTML = creditCardNum[2]
+    numSection4.innerHTML = creditCardNum[3]
+
+    
+    expiryDate.innerHTML = localStorage.getItem('creditCardExp')
+
+    cardCVC.innerHTML = localStorage.getItem('creditCardCVC')
+
+    cardholder.innerHTML = localStorage.getItem('firstname') + localStorage.getItem('lastname')
 }
 
 // checking if user does not own credit card then show him screen to request for credit card
@@ -88,15 +99,5 @@ if (hasApplyForCredit == 'false'){
     noCreScr1.style.display = 'flex'
     noCreScr2.style.display = 'none'
 } else{
-    numSection1.innerHTML = cardNum1
-    numSection2.innerHTML = cardNum2
-    numSection3.innerHTML = cardNum3
-    numSection4.innerHTML = cardNum4
-
-    expiryDate.innerHTML = expDate
-
-    cardCVC.innerHTML = cvc
-
-    cardholder.innerHTML = localStorage.getItem('firstname') + localStorage.getItem('lastname')
-
+    updateCreditCard()
 }

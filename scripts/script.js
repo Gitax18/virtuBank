@@ -50,6 +50,42 @@ const user = {}
 
 
 // ************************* FUNCTIONS
+
+function createCreditCard(){
+    const cardNum1  = Math.trunc((Math.random()*4999) + 1000)
+    const cardNum2  = Math.trunc((Math.random()*4999) + 1000)
+    const cardNum3  = Math.trunc((Math.random()*4999) + 1000)
+    const cardNum4  = Math.trunc((Math.random()*4999) + 1000)
+
+    const creditCardNumber = `${String(cardNum1)} ${String(cardNum2)} ${String(cardNum3)} ${String(cardNum4)} `
+    const expYear = new Date().getFullYear().toString().substring(2)
+    const expMonth = `${new Date().getMonth() + 1}`.padStart(2,0)
+
+    const expDate = `${expMonth}/${Number(expYear) + 5}`
+
+    const cvc = Math.trunc(Math.random()*888) + 100
+
+    localStorage.setItem('creditCardNumber', creditCardNumber)
+    localStorage.setItem('creditCardExp', expDate) 
+    localStorage.setItem('creditCardCVC', cvc)
+
+    numSection1.innerHTML = cardNum1
+    numSection2.innerHTML = cardNum2
+    numSection3.innerHTML = cardNum3
+    numSection4.innerHTML = cardNum4
+
+    expiryDate.innerHTML = expDate
+
+    cardCVC.innerHTML = cvc
+
+    cardholder.innerHTML = localStorage.getItem('firstname') + localStorage.getItem('lastname')
+
+    localStorage.setItem('credit', 'true')
+}
+
+
+
+
 function registerUser(  ){
     // e.preventDefault()
     localStorage.clear()
@@ -85,8 +121,12 @@ function registerUser(  ){
             localStorage.setItem('state', state.value)
             localStorage.setItem('password', password.value)
 
-            if (wantcard.checked) localStorage.setItem('credit', true)
+            if (wantcard.checked) {
+                localStorage.setItem('credit', true)
+                createCreditCard()
+            }
             else localStorage.setItem('credit', false)
+
 
             formFilled = true
 
@@ -121,6 +161,7 @@ if (localStorage.getItem('email') === null){
     const greet = document.getElementById('greet--heading')
     greet.textContent = "Register to continue"
     document.getElementById('btn-register').addEventListener('click', registerUser)
+
 } else{
     container.innerHTML = loginForm
     const crtActBtn = document.getElementById('register-link')
