@@ -50,18 +50,24 @@ getLoanBtn.addEventListener('click', (e)=>{
     console.log(isFormFilled)
 
     if(isFormFilled === true){
+
+        if (localStorage.getItem('movements') != null){
+
         const movements = localStorage.getItem('movements').split(',');
         const movementDates = localStorage.getItem('movementTime').split(',')
 
         console.log(movements)
         movements.push(loanAmount.value)
         movementDates.push(new Date().toISOString())
-
-        console.log(movements)
         localStorage.removeItem('movements')
         localStorage.removeItem('movementTime')
         localStorage.setItem('movements', movements)
         localStorage.setItem('movementTime', movementDates)
+    } else{
+        localStorage.setItem('movements', [loanAmount.value])
+        localStorage.setItem('movementTime', [new Date().toISOString()])
+        }
+
 
          loanTaker.value = accountNo.value = creditCardNo.value = loanAmount.value = ''
 
@@ -81,12 +87,21 @@ function validateForm(){
     const CreditCard = creditCardNo.value 
     const Loan = loanAmount.value 
 
+    console.log(LoanTakerName)
+    console.log(AccountNo)
+    console.log(CreditCard)
+    console.log(Loan)
+
 
     if(LoanTakerName.toLowerCase() == localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase()
     && CreditCard == localStorage.getItem('creditCardNumber').split(' ').join('')
     // && AccountNo == localStorage.getItem('account-no')
     && AccountNo == 111
     && Loan <= 15000){
+       
+        console.log(LoanTakerName.toLowerCase() == localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase())
+        console.log(CreditCard == localStorage.getItem('creditCardNumber').split(' ').join(''))
+
         return true
     } else return false 
 

@@ -36,15 +36,15 @@ labelTime.textContent = `${day}/${month}/${year}, ${hours}:${mins} ${period}`
 
 // setting movements in localstorage 
 // fake movements
-localStorage.setItem('movements', [-100, 3000, 4000, -100, -500, 700]);
-localStorage.setItem('movementTime', [
-    "2019-09-01T14:48:00.000Z",
-    "2020-06-12T10:48:00.000Z",
-    "2022-10-02T12:12:00.000Z",
-    "2022-11-05T18:43:00.000Z",
-    "2023-01-06T22:08:00.000Z",
-    "2023-05-11T19:12:00.000Z",
-]);
+// localStorage.setItem('movements', [-100, 3000, 4000, -100, -500, 700]);
+// localStorage.setItem('movementTime', [
+//     "2019-09-01T14:48:00.000Z",
+//     "2020-06-12T10:48:00.000Z",
+//     "2022-10-02T12:12:00.000Z",
+//     "2022-11-05T18:43:00.000Z",
+//     "2023-01-06T22:08:00.000Z",
+//     "2023-05-11T19:12:00.000Z",
+// ]);
 
 // localStorage.removeItem('movements')
 
@@ -71,7 +71,7 @@ profile.addEventListener('click', ()=> location.href = 'profile.html')
 function greetUserLabel(){
     if (hasMovs !== null){
         const time = new Date();
-        const period = time.getHours() < 12 ? 'Good Morning': (time.getHours() >= 12 && time.getHours() < 18 ? 'Good Afternoon' : 'Good Evening'); 
+        const period = 'Welcome'; 
         console.log(time.getHours())
         console.log(period)
         const user = localStorage.getItem('firstname')
