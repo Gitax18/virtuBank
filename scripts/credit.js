@@ -136,7 +136,7 @@ function createCreditCard(){
 
     cardCVC.innerHTML = cvc
 
-    cardholder.innerHTML = localStorage.getItem('firstname') + localStorage.getItem('lastname')
+    cardholder.innerHTML = localStorage.getItem('firstname') +' '+ localStorage.getItem('lastname')
 
 
     localStorage.setItem('credit', 'true')
@@ -155,7 +155,7 @@ function updateCreditCard() {
 
     cardCVC.innerHTML = localStorage.getItem('creditCardCVC')
 
-    cardholder.innerHTML = localStorage.getItem('firstname') + localStorage.getItem('lastname')
+    cardholder.innerHTML = localStorage.getItem('firstname') +' '+ localStorage.getItem('lastname')
 }
 
 
