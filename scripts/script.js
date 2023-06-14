@@ -120,6 +120,7 @@ function registerUser(  ){
             localStorage.setItem('city', city.value)
             localStorage.setItem('state', state.value)
             localStorage.setItem('password', password.value)
+            localStorage.setItem('account-no', Math.trunc(Math.random()*8888888888)+1000000000)
 
             if (wantcard.checked) {
                 localStorage.setItem('credit', true)

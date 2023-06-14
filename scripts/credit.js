@@ -26,6 +26,7 @@ const loanTaker = document.querySelector('#name');
 const accountNo = document.querySelector('#account-no');
 const creditCardNo = document.querySelector('#card-no');
 const loanAmount = document.querySelector('#amount');
+const getLoanBtn = document.querySelector('#loanBtn');
 
 // checking if user own credit card
 const hasApplyForCredit = localStorage.getItem('credit');
@@ -42,8 +43,57 @@ noScrBtn2.addEventListener('click', ()=>{
 
 })
 
+getLoanBtn.addEventListener('click', (e)=>{
+    e.preventDefault()
+
+    const isFormFilled = validateForm()
+    console.log(isFormFilled)
+
+    if(isFormFilled === true){
+        const movements = localStorage.getItem('movements').split(',');
+        const movementDates = localStorage.getItem('movementTime').split(',')
+
+        console.log(movements)
+        movements.push(loanAmount.value)
+        movementDates.push(new Date().toISOString())
+
+        console.log(movements)
+        localStorage.removeItem('movements')
+        localStorage.removeItem('movementTime')
+        localStorage.setItem('movements', movements)
+        localStorage.setItem('movementTime', movementDates)
+
+         loanTaker.value = accountNo.value = creditCardNo.value = loanAmount.value = ''
+
+        alert('loan approved')
+        
+
+    } else{
+        alert('fill the form correctly, check your details')
+    }
+})
+
 
 // functions 
+function validateForm(){
+    const LoanTakerName = loanTaker.value 
+    const AccountNo = accountNo.value 
+    const CreditCard = creditCardNo.value 
+    const Loan = loanAmount.value 
+
+
+    if(LoanTakerName.toLowerCase() == localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase()
+    && CreditCard == localStorage.getItem('creditCardNumber').split(' ').join('')
+    // && AccountNo == localStorage.getItem('account-no')
+    && AccountNo == 111
+    && Loan <= 15000){
+        return true
+    } else return false 
+
+
+}
+
+
 function createCreditCard(){
     const cardNum1  = Math.trunc((Math.random()*4999) + 1000)
     const cardNum2  = Math.trunc((Math.random()*4999) + 1000)
@@ -73,6 +123,7 @@ function createCreditCard(){
 
     cardholder.innerHTML = localStorage.getItem('firstname') + localStorage.getItem('lastname')
 
+
     localStorage.setItem('credit', 'true')
 }
 
@@ -91,6 +142,8 @@ function updateCreditCard() {
 
     cardholder.innerHTML = localStorage.getItem('firstname') + localStorage.getItem('lastname')
 }
+
+
 
 // checking if user does not own credit card then show him screen to request for credit card
 if (hasApplyForCredit == 'false'){
