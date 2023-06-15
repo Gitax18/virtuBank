@@ -1,0 +1,38 @@
+.container{
+    display: flex;
+}
+
+main.container{
+ align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 75vh;
+}
+
+.main-heading{
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1b1c1e;
+}
+
+.warning{
+    letter-spacing: .81px;
+    font-size: 2rem;
+    width: 45rem;
+    margin-block: 4rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+button{
+    height: 4rem;
+    width: 12rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background-color: #0041aa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
