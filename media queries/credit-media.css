@@ -13,10 +13,10 @@
     }
     .card-back{
         top: 10%;
-        right: 25%;
+        right: 20%;
     }
     .card-front{
-        left: 10%;
+        left: 5%;
     }
     .grid-col-2{
         grid-template-columns: 1fr;
