@@ -93,10 +93,9 @@ function validateForm(){
     console.log(Loan)
 
 
-    if(LoanTakerName.toLowerCase() == localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase()
-    && CreditCard == localStorage.getItem('creditCardNumber').split(' ').join('')
-    // && AccountNo == localStorage.getItem('account-no')
-    && AccountNo == 111
+    if(LoanTakerName.toLowerCase() === localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase()
+    && CreditCard === localStorage.getItem('creditCardNumber').split(' ').join('')
+    && AccountNo === localStorage.getItem('account-no')
     && Loan <= 15000){
        
         console.log(LoanTakerName.toLowerCase() == localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase())
