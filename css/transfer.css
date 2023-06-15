@@ -1,0 +1,51 @@
+.main-container{
+    max-width: 80vw;
+    margin: auto;
+}
+
+.container-transfer{
+    max-width: 500px;
+    margin: 5rem auto;
+}
+
+.main-heading{
+    font-size: 3.2rem;
+    color: #1b1c1e;
+    text-align: center;
+    margin: 5rem auto 2.4rem;
+    text-transform: uppercase;
+}
+
+.transfer-form{
+    width: 100%;
+    padding: 2.4rem;
+    font-size: 1.6rem;
+}
+
+.transfer-form label{
+    margin-top: 1.6rem;
+    text-transform: uppercase;
+}
+
+.transfer-form input{
+    height: 4rem;
+    font-size: 2rem;
+    padding-inline: .8rem;
+    letter-spacing: .51px;
+}
+
+.transfer-form input:active,
+.transfer-form input:focus{
+    outline: none;
+}
+
+#transfer-btn{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 1.6rem;
+    border: none;
+    height: 4rem;
+    background-color: rgb(0, 92, 212);
+}

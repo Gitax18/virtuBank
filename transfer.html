@@ -23,27 +23,27 @@
 <body>
     <header class="container">
         <div class="header">
-            <div class="logo b">VirtuBank</div>
+            <div class="logo b"><a href="dashboard.html">VirtuBank</a></div>
         </div>
     </header>
 
-    <main class="container">
+    <main class="main-container">
         <div class="container-transfer">
 
-            <h1 class="main-heading">Transfer: </h1>
+            <h1 class="main-heading">Transfer Money</h1>
 
             <form class="transfer-form grid grid-col-1 gap-sm">
                 <label for="receiver">Receiver Full Name: </label>
-                <input type="text" name="receiver" id="receiver">
+                <input type="text" name="receiver" id="receiver" placeholder="e.g. Jane Doe">
 
                 <label for="rec-act-no">Receiver Account No: </label>
-                <input type="number" name="rec-act" id="rec-act-no">
+                <input type="number" name="rec-act" id="rec-act-no" placeholder="e.g. 0112345678">
 
                 <label for="ifsc">IFSC: </label>
-                <input type="number" name="ifsc" id="ifsc">
+                <input type="text" name="ifsc" id="ifsc" placeholder="e.g. VB001234">
 
                 <label for="amount">Amount: </label>
-                <input type="number" name="amount" id="amount">
+                <input type="number" name="amount" id="amount" placeholder="e.g. 15000">
 
                 <button type="submit" id="transfer-btn">Transfer</button>
             </form>

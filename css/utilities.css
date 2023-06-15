@@ -103,6 +103,11 @@ letter spacing: text - .18rem
     
 }
 
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+
 .logo::before,
 .logo::after{
     content: '';
