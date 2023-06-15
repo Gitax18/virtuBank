@@ -59,6 +59,7 @@ sendBtn.addEventListener('click', (e)=>{
         localStorage.removeItem('movements')
         localStorage.setItem('movements', movArr)
 
+        alert('Transaction done!')
         amount.value = receiver.value = ifsc.value = acctNo.value = ''
     }
 

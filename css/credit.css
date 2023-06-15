@@ -164,9 +164,11 @@ main{
 }
 
 .loan-form input{
-    font-size: 1.6rem;
+    height: 4rem;
+    font-size: 2rem;
     border: 1px solid #1b1c1e;
-    padding: 1.2rem 1.6rem;
+    padding: 0 .8rem;
+    letter-spacing: .51px;
     margin-bottom: 1.2rem;
 }
 
