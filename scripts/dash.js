@@ -61,7 +61,7 @@ calculateSumIn()
 // ******************* Event listeners
 getLoan.addEventListener('click', ()=> location.href = 'credit.html')
 transfer.addEventListener('click', ()=> location.href = 'transfer.html')
-deleteAccount.addEventListener('click', ()=> location.href = 'remove.html')
+deleteAccount.addEventListener('click', ()=> location.href = 'delete.html')
 profile.addEventListener('click', ()=> location.href = 'profile.html')
 
 
