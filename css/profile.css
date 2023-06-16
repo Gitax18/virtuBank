@@ -1,0 +1,54 @@
+.main-heading{
+    font-size: 4.4rem;
+    text-transform: uppercase;
+    margin-block-start: 3.6rem;
+    color: #1b1c1e;
+}
+
+hr{
+    margin: .8rem 0 3.6rem;
+}
+
+#name-title{
+    color: #1b1c1e;
+    letter-spacing: .51px;
+    font-size: 3.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 1.6rem;
+}
+
+.ifsc-no,
+.acct-no,
+.credit-card{
+    font-size: 2rem;
+    padding-bottom: .4rem;
+    color: #1b1c1e;
+    letter-spacing: .51px;
+}
+
+.personal-details{
+    margin-block: 4rem;
+}
+
+input{
+    font-size: 1.6rem;
+    padding: 0 .8rem;
+    height: 4rem;
+    pointer-events: none;
+}
+
+.profile-btn{
+    background-color: rgb(0, 103, 213);
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.51px;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.profile-btn:active{
+    scale: 0.99;
+}
