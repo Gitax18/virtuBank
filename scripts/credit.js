@@ -98,13 +98,21 @@ function validateForm(){
     if(LoanTakerName.toLowerCase() === localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase()
     && CreditCard === localStorage.getItem('creditCardNumber').split(' ').join('')
     && AccountNo === localStorage.getItem('account-no')
-    && Loan <= 15000){
+    && Loan <= 150000 
+    && Loan !== ''){
        
         console.log(LoanTakerName.toLowerCase() == localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase())
         console.log(CreditCard == localStorage.getItem('creditCardNumber').split(' ').join(''))
 
         return true
-    } else return false 
+    } else {
+        if (Loan > 150000){
+            alert('Loan amount cannot exceed 150,000')
+            return false
+        }
+
+        return false
+    } 
 
 
 }
