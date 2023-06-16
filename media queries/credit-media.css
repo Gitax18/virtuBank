@@ -86,6 +86,16 @@
 
     .screen-1, 
     .screen-2{
-        width: 80%;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:340px){
+    html{
+        font-size: 6px;
+    }
+
+    .container-form{
+        margin-top: 12rem;
     }
 }
