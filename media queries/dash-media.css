@@ -54,3 +54,8 @@
         font-size: 6px;
     }
 }
+@media screen and (max-width:315px) {
+    .container-summaries{
+        grid-template-columns: 1fr;
+    }
+}
