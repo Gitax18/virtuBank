@@ -111,3 +111,50 @@
     gap: 1.2rem;
 
 }
+
+/* forget password screen */
+.forget-pwd{
+    inset: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e1e1e1;
+    z-index: 1;
+}
+
+.main-heading{
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.scr-1{
+    padding: .8rem;
+    background-color: #404040;
+    color: #fff;
+    height: 20rem;
+    width: 45rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.confirm-form{
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.confirm-form input,
+.confirm-form button{
+    height: 4rem;
+    padding-inline: .8rem;
+    font-size: 1.6rem;
+}
+
+.confirm-form button{
+    background-color: #0051d4;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}

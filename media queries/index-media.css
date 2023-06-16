@@ -37,4 +37,16 @@
         grid-column: 1/2;   
 
     }
+
+    .scr-1{
+        width: 96%;
+    }
+    .main-heading{
+        font-size: 2rem;
+    }
+    .confirm-form{
+        width: 96%;
+
+    }
+
 }
