@@ -69,14 +69,9 @@ profile.addEventListener('click', ()=> location.href = 'profile.html')
 // ******************* Functions
 // function to greet the user
 function greetUserLabel(){
-    if (hasMovs !== null){
-        const time = new Date();
         const period = 'Welcome'; 
-        console.log(time.getHours())
-        console.log(period)
         const user = localStorage.getItem('firstname')
         usernameLabel.innerText = `${period}, ${user}`
-    }
 } 
 
 // function to add movement to the movement container
