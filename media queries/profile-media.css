@@ -1,0 +1,29 @@
+@media screen and (max-width: 780px) {
+    .container{
+        max-width: 90vw;
+    }
+
+    .grid-col-3{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-btn{
+        grid-column: 1/3;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .main-heading{
+        font-size: 4rem;
+    }
+    .account-details{
+        font-size: 8px;
+    }
+    .grid-col-3{
+        grid-template-columns: 1fr;
+    }
+
+    .profile-btn{
+        grid-column: 1/2;
+    }
+}
