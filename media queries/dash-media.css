@@ -47,15 +47,14 @@
     .movement-amount{
         font-size: 2.4rem;
     }
+
+    .container-summaries{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width:340px) {
     html{
         font-size: 6px;
-    }
-}
-@media screen and (max-width:315px) {
-    .container-summaries{
-        grid-template-columns: 1fr;
     }
 }
