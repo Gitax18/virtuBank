@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+    <!-- smtp cdn -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </head>
 <body>
     <header class="container">
@@ -29,13 +32,14 @@
         </div>
     </header>
 
-    <section class="forget-pwd">
+    <section class="forget-pwd hidden">
         <div class="scr-1">
             <h2 class="main-heading">Confirm your Email</h2>
             <form class="confirm-form grid grid-col-1 gap-sm">
-                <input type="text" class="confirm-email" placeholder="e.g. mymail@gmail.com ">
-                <button type="submit">submit</button>
+                <input type="email" id="conf-email" class="confirm-email" placeholder="e.g. mymail@gmail.com ">
+                <button type="submit" id="send-pwd">submit</button>
             </form>
+            <p>check your spam folder for our mail, if not find in inbox.</p>
         </div>
     </section>
 
@@ -45,7 +49,6 @@
         </div>
     </main>
     
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

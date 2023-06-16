@@ -156,6 +156,42 @@ function loginUser(e){
     
 }
 
+function forgetPwd(e){
+    e.preventDefault()
+
+    document.querySelector('.forget-pwd').classList.remove('hidden')
+
+    const sendPwdBtn = document.getElementById('send-pwd')
+    const email = document.getElementById('conf-email')
+
+    console.log(email)
+
+    sendPwdBtn.addEventListener('click',(e)=>{
+        e.preventDefault()
+
+        console.log(email.value)
+        console.log(typeof email.value)
+        console.log(email.value != '' && email.value.includes('@') && email.value.includes('.'))
+        if(email.value != '' && email.value.includes('@') && email.value.includes('.')){
+            // sec tok: 0cf8d0e1-3fb3-419c-a97f-85ad507af859
+            Email.send({
+                SecureToken : "f0e2794d-335f-4b09-88be-f1d75bf909ce",
+                To : email.value,
+                From : "lusifer0418@gmail.com",
+                Subject : "your virtuBank password",
+                Body : `your password is ${localStorage.getItem('password')}`
+            }).then(
+              message => alert(message)
+            );
+        }   
+        
+        email.value = 0
+        document.querySelector('.forget-pwd').classList.add('hidden')
+
+
+    })
+}
+
 // localStorage.clear()
 if (localStorage.getItem('email') === null){
     container.innerHTML = registerForm
@@ -166,16 +202,21 @@ if (localStorage.getItem('email') === null){
 } else{
     container.innerHTML = loginForm
     const crtActBtn = document.getElementById('register-link')
+    const forgetPwdBtn = document.getElementById('forgot-password-link')
+
+
 
     function register() {
         localStorage.clear()
         location.reload()
     }
 
+    forgetPwdBtn.addEventListener('click', forgetPwd)
     crtActBtn.addEventListener('click', register)
     const greet = document.getElementById('greet--heading')
     greet.textContent = "Login to continue"
     document.getElementById('btn-login').addEventListener('click', loginUser)
-    document.getElementById('btn-login').addEventListener('keydown', loginUser)
+    // document.getElementById('btn-login').addEventListener('keydown', loginUser)
     
 }
+

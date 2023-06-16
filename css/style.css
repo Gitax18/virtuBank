@@ -27,7 +27,7 @@
 
 .login-form{
     width: 35rem;
-    background-color: #E5596990;
+    background-color: #0067d590;
     padding: 1.8rem;
     box-shadow: 2px 2px 15px 2px #00000010;
 }
@@ -61,7 +61,7 @@
 #btn-register{
     background-color: #fff;
     border: none;
-    color: #E55969;
+    color: #0051d4;
     height: 4rem;
     font-size: 1.6rem;
     cursor: pointer;
@@ -87,7 +87,7 @@
 }
 
 .register-form{
-    background-color: #E5596990;
+    background-color: #0067d590;
     width: 60%;
     padding: 2.4rem;
     box-shadow: 2px 2px 15px 2px #00000010;
@@ -132,7 +132,7 @@
     padding: .8rem;
     background-color: #404040;
     color: #fff;
-    height: 20rem;
+    height: 28rem;
     width: 45rem;
     position: absolute;
     top: 50%;
@@ -154,7 +154,16 @@
 
 .confirm-form button{
     background-color: #0051d4;
-    color: #fff;
     text-transform: uppercase;
     cursor: pointer;
+    color: #fff;
+}
+
+.scr-1 p{
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+
+
 }
