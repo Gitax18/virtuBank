@@ -9,7 +9,7 @@
     
         <!--  stylesheets -->
         <link rel="stylesheet" href="css/utilities.css">
-        <link rel="stylesheet" href="css/delete.css">
+        <link rel="stylesheet" href="css/profile.css ">
     
         <!-- media queries -->
         <link rel="stylesheet" href="media queries/delete-media.css">
@@ -30,13 +30,21 @@
         <h1 class="main-heading">profile</h1>
         <section class="account-details">
             <h2 id="name-title">Gitanhsu sankhla</h2>
-            <p class="ifsc-no">VB45678</p>
-            <p id="acct-no">0112345678</p>
-            <p id="credit-card">5334 2342 2342 1232</p>
+            <p class="ifsc-no">IFSC : <span class="b" id="ifsc-no">VB45678</span></p>
+            <p id="acct-no">Account Number: <span class="b" id="acct-no">0112345678</span></p>
+            <p id="credit-card">Credit Card No. : <span class="b" id="credit-no">5334 2342 2342 1232</span></p>
         </section>
 
-        <section class="personal-details">
-            
+        <section class="personal-details grid grid-col-3 gap-md">
+            <input type="text" name="firstname" id="firstname" placeholder="Firstname">
+            <input type="text" name="lastname" id="lastname" placeholder="Lastname">
+            <input type="text" name="email" id="email" placeholder="Email">
+            <input type="text" name="password" id="password" placeholder="Password">
+            <input type="text" name="mobile-no" id="mobile-no" placeholder="Mobile">
+            <input type="text" name="address" id="address" placeholder="Address">
+            <input type="text" name="city" id="city" placeholder="City">
+            <input type="text" name="state" id="state" placeholder="State">
+            <button type="submit" class="profile-btn" id="edit-save">Edit</button>
         </section>
     </main>
     
