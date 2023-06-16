@@ -74,6 +74,24 @@ function greetUserLabel(){
         usernameLabel.innerText = `${period}, ${user}`
 } 
 
+// function to return formated movement date
+function formatedMovementDate(date){
+    const daysPassed = (date1, date2) =>{
+      return Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24))
+    }
+  
+    const days = daysPassed(new Date(), date)
+  
+    if (days === 0) return 'Today'
+    if (days === 1) return 'Yesterday'
+    if (days <= 7) return `${days} days ago`
+  
+    const day = `${date.getDate()}`.padStart(2, 0)
+    const month = `${date.getMonth() + 1}`.padStart(2, 0)    
+    const year = `${date.getFullYear()}`
+    return `${day}/${month}/${year}` 
+  }
+
 // function to add movement to the movement container
 function addMovements(){
     if (hasMovs === null){
@@ -95,11 +113,8 @@ function addMovements(){
             const type = mov > 0 ? 'deposit' : 'withdraw';
 
             const movDates = localStorage.getItem('movementTime').split(',');
-            const movDate = new Date(movDates[ind])
-            const y = `${movDate.getFullYear()}`.padStart(2, 0)
-            const m = `${movDate.getMonth() + 1}`.padStart(2, 0)
-            const d = `${movDate.getDate()}`.padStart(2, 0)
-            const date = `${d}/${m}/${y}`;
+            const date = formatedMovementDate(new Date(movDates[ind]))
+            
 
             const movementString = `
             <!-- a row -->
@@ -157,6 +172,7 @@ function calculateSumIn(){
         const sumin = localStorage.getItem('movements')
                         .split(',')
                         .map(e => Number(e))
+                        .filter(e => e > 0)
                         .map(e => Math.abs(e))
                         .reduce((a,e) => a+e,0)
 

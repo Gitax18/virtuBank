@@ -90,8 +90,6 @@ function registerUser(  ){
     // e.preventDefault()
     localStorage.clear()
 
-    let formFilled = false
-
     const firstname = document.getElementById('firstname') 
     const lastname = document.getElementById('lastname') 
     const email = document.getElementById('email') 
@@ -112,9 +110,9 @@ function registerUser(  ){
         state.value !== '' &&
         password.value !== ''){
 
-            localStorage.setItem('firstname', firstname.value)
-            localStorage.setItem('lastname', lastname.value)
-            localStorage.setItem('email', email.value)
+            localStorage.setItem('firstname', firstname.value.trim())
+            localStorage.setItem('lastname', lastname.value.trim())
+            localStorage.setItem('email', email.value.trim())
             localStorage.setItem('mobile', mobile.value)
             localStorage.setItem('address', address.value)
             localStorage.setItem('city', city.value)
@@ -146,7 +144,7 @@ function loginUser(e){
     const loginEmail = document.getElementById('email-login')
     const loginPassword = document.getElementById('password-login')
     
-    if (loginEmail.value === localStorage.getItem('email')
+    if (loginEmail.value.trim() === localStorage.getItem('email')
     && loginPassword.value === localStorage.getItem('password')){
         loginEmail.value = loginPassword.value = ''
         alert('login success')

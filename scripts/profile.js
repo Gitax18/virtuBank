@@ -82,9 +82,9 @@ editSaveBtn.addEventListener('click', function (e){
             inputs.forEach(e=> e.style.border = '1px solid grey');
             editSaveBtn.style.backgroundColor = '#0067d5'
 
-            localStorage.setItem('firstname',fnameIn.value)
-            localStorage.setItem('lastname',lnameIn.value)
-            localStorage.setItem('email',emailIn.value)
+            localStorage.setItem('firstname',fnameIn.value.trim())
+            localStorage.setItem('lastname',lnameIn.value.trim())
+            localStorage.setItem('email',emailIn.value.trim())
             localStorage.setItem('password',passwordIn.value)
             localStorage.setItem('mobile',mobileIn.value)
             localStorage.setItem('address',addressIn.value)
