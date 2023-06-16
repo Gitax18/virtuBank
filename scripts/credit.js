@@ -31,6 +31,7 @@ const getLoanBtn = document.querySelector('#loanBtn');
 // checking if user own credit card
 const hasApplyForCredit = localStorage.getItem('credit');
 
+
 // Event Listeners
 noScrBtn1.addEventListener('click', ()=>{
     noCreScr1.style.display = 'none'
@@ -40,6 +41,7 @@ noScrBtn1.addEventListener('click', ()=>{
 noScrBtn2.addEventListener('click', ()=>{
     createCreditCard()
     noCreditCardScreen.style.display = 'none'
+    location.href = 'credit.html'
 
 })
 
@@ -137,7 +139,6 @@ function createCreditCard(){
 
     cardholder.innerHTML = localStorage.getItem('firstname') +' '+ localStorage.getItem('lastname')
 
-
     localStorage.setItem('credit', 'true')
 }
 
@@ -166,5 +167,8 @@ if (hasApplyForCredit == 'false'){
     noCreScr1.style.display = 'flex'
     noCreScr2.style.display = 'none'
 } else{
+    // message
+    const mess = confirm('check your profile for your account number')
+    if (mess) location.href = 'profile.html'
     updateCreditCard()
 }
