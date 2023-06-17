@@ -108,7 +108,8 @@ function registerUser(  ){
         address.value !== '' &&
         city.value !== '' &&
         state.value !== '' &&
-        password.value !== ''){
+        password.value !== '' &&
+        String(Number(mobile.value)) !== 'NaN'){
 
             localStorage.setItem('firstname', firstname.value.trim())
             localStorage.setItem('lastname', lastname.value.trim())
@@ -132,9 +133,8 @@ function registerUser(  ){
             alert(`Dear ${firstname.value}, Your account has been registered, login to continue`)
             container.innerHTML = loginForm
 
-        } else alert('fill the form completely')
+        } else alert('fill the form correctly')
         
-        // if (formFilled) window.location.reload()
 }
 
 
