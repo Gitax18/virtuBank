@@ -168,7 +168,9 @@ if (hasApplyForCredit == 'false'){
     noCreScr2.style.display = 'none'
 } else{
     // message
-    const mess = confirm('check your profile for your account number')
-    if (mess) location.href = 'profile.html'
     updateCreditCard()
+    setTimeout(()=>{
+        const mess = confirm('check your profile for your account number')
+        if (mess) location.href = 'profile.html'
+    }, 3000)
 }
