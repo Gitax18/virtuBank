@@ -71,9 +71,11 @@ getLoanBtn.addEventListener('click', (e)=>{
         }
 
 
-         loanTaker.value = accountNo.value = creditCardNo.value = loanAmount.value = ''
+        loanTaker.value = accountNo.value = creditCardNo.value = loanAmount.value = ''
 
         alert('loan approved')
+
+        location.href = 'dashboard.html'
         
 
     } else{
@@ -89,21 +91,11 @@ function validateForm(){
     const CreditCard = creditCardNo.value 
     const Loan = loanAmount.value 
 
-    console.log(LoanTakerName)
-    console.log(AccountNo)
-    console.log(CreditCard)
-    console.log(Loan)
-
-
     if(LoanTakerName.toLowerCase() === localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase()
     && CreditCard === localStorage.getItem('creditCardNumber').split(' ').join('')
     && AccountNo === localStorage.getItem('account-no')
     && Loan <= 150000 
     && Loan !== ''){
-       
-        console.log(LoanTakerName.toLowerCase() == localStorage.getItem('firstname').toLowerCase()+' '+localStorage.getItem('lastname').toLowerCase())
-        console.log(CreditCard == localStorage.getItem('creditCardNumber').split(' ').join(''))
-
         return true
     } else {
         if (Loan > 150000){

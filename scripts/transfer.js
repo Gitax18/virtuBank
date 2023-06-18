@@ -61,6 +61,7 @@ sendBtn.addEventListener('click', (e)=>{
 
         alert('Transaction done!')
         amount.value = receiver.value = ifsc.value = acctNo.value = ''
+        location.href = 'dashboard.html'
     }
 
 })
