@@ -13,9 +13,9 @@ const sendBtn = document.getElementById('transfer-btn');
 
 function validate() {
     if(receiver.value == ''
-    && acctNo.value == ''
-    && ifsc.value == ''
-    && amount.value == ''){
+    || acctNo.value == ''
+    || ifsc.value == ''
+    || amount.value == ''){
         alert('Please fill the form correctly.')
         return false
     }else{
@@ -30,6 +30,11 @@ function validate() {
 
         if(Number(amount.value) >= (0.30 * movSum) + 1){
             alert(`amount cannot exceed 30% of total balance i.e ${ 0.30 * movSum }`)
+            return false
+        }
+
+        if(Number(amount.value) < 0){
+            alert('please enter amount correctly')
             return false
         }
 
