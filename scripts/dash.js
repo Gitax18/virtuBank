@@ -70,7 +70,9 @@ profile.addEventListener('click', ()=> location.href = 'profile.html')
 // function to greet the user
 function greetUserLabel(){
         const period = 'Welcome'; 
-        const user = localStorage.getItem('firstname')
+        const user = localStorage.getItem('firstname')[0].toUpperCase()
+                   + localStorage.getItem('firstname').slice(1).toLowerCase()
+
         usernameLabel.innerText = `${period}, ${user}`
 } 
 
